@@ -63,16 +63,14 @@ function GalleryCard({ item, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.45, delay: index * 0.05, ease }}
-      className="overflow-hidden rounded-2xl border border-white/80 bg-white/65 shadow-[0_12px_36px_-18px_rgba(88,72,120,0.28)] backdrop-blur-xl"
+      className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm"
     >
-      <div className="bg-gradient-to-b from-slate-50/95 to-white/70 p-3 sm:p-4">
-        <div className="overflow-hidden rounded-2xl border border-white/70 shadow-xl ring-1 ring-slate-900/[0.05]">
-          <img
-            src={item.img}
-            alt={item.label}
-            className="h-[220px] w-full object-contain bg-white/80 sm:h-[260px] lg:h-[280px]"
-          />
-        </div>
+      <div className="overflow-hidden bg-white p-3 sm:p-4">
+        <img
+          src={item.img}
+          alt={item.label}
+          className="h-[220px] w-full rounded-2xl border border-slate-100 object-contain shadow-md sm:h-[260px] lg:h-[280px]"
+        />
       </div>
       <figcaption className="border-t border-white/55 px-5 py-4">
         <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">{item.label}</span>
@@ -91,41 +89,41 @@ function ProjectBlock({ title, subtitle, description, tech, features, cards, gal
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease }}
-      className="relative overflow-hidden rounded-[2rem] border border-white/75 bg-white/70 p-6 shadow-[0_4px_40px_-12px_rgba(88,72,120,0.12)] backdrop-blur-xl md:p-10"
+      className="relative overflow-hidden rounded-3xl border border-slate-100 bg-white p-6 shadow-sm md:p-8 lg:p-10"
     >
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
+      <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-3">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/90 bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
             <span className={`h-2 w-2 rounded-full ${accent}`} aria-hidden />
             Featured
           </div>
           <h3 className="font-display text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">{title}</h3>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{subtitle}</p>
-          <p className="max-w-2xl text-base leading-relaxed text-slate-600 md:text-[1.0625rem]">{description}</p>
+          <p className="max-w-4xl text-base leading-relaxed text-slate-600 md:text-[1.0625rem]">{description}</p>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-2 flex flex-wrap gap-2">
             {tech.map((item) => (
-              <span key={item} className="rounded-full border border-slate-200/75 bg-white/85 px-3.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm">
+              <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-xs font-semibold text-slate-700">
                 {item}
               </span>
             ))}
           </div>
 
-          <div className="mt-2 flex flex-wrap gap-2">
+          <div className="mt-1 flex flex-wrap gap-2">
             {features.map((item) => (
-              <span key={item} className="rounded-full border border-[#e8ddff]/90 bg-gradient-to-r from-[#f5f0ff]/90 to-[#edf6ea]/80 px-3 py-1 text-[11px] font-semibold text-slate-700 sm:text-xs">
+              <span key={item} className="rounded-full border border-slate-100 bg-white px-3 py-1 text-[11px] font-semibold text-slate-600 shadow-sm sm:text-xs">
                 {item}
               </span>
             ))}
           </div>
 
           {cards ? (
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {cards.map((card) => {
                 const Icon = card.icon;
                 return (
-                  <div key={card.title} className="rounded-[1.15rem] border border-white/78 bg-white/60 p-5 shadow-sm">
-                    <span className="inline-flex rounded-xl bg-gradient-to-br from-[#f0eaff] to-[#eaf4e6] p-2.5 text-slate-700 ring-1 ring-cyan-100/35">
+                  <div key={card.title} className="rounded-2xl border border-slate-100 bg-slate-50 p-5 shadow-sm">
+                    <span className="inline-flex rounded-xl bg-white p-2.5 text-slate-700 shadow-sm ring-1 ring-slate-100">
                       <Icon className="h-4 w-4" />
                     </span>
                     <h4 className="mt-3 text-sm font-semibold text-slate-900">{card.title}</h4>
@@ -137,39 +135,35 @@ function ProjectBlock({ title, subtitle, description, tech, features, cards, gal
           ) : null}
         </div>
 
-        <div className="space-y-5">
-          {featuredImage ? (
-            <motion.figure
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: 0.05, ease }}
-              className="overflow-hidden rounded-2xl border border-white/80 bg-white/65 shadow-[0_18px_48px_-24px_rgba(88,72,120,0.3)] backdrop-blur-xl"
-            >
-              <div className="bg-gradient-to-b from-slate-50/95 to-white/70 p-3 sm:p-4">
-                <div className="overflow-hidden rounded-2xl border border-white/70 shadow-xl ring-1 ring-slate-900/[0.05]">
-                  <img
-                    src={featuredImage.img}
-                    alt={featuredImage.label}
-                    className="h-[220px] w-full object-contain bg-white/85 sm:h-[300px] lg:h-[360px]"
-                  />
-                </div>
-              </div>
-              <figcaption className="border-t border-white/55 px-5 py-4">
-                <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">{featuredImage.label}</span>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{featuredImage.description}</p>
-              </figcaption>
-            </motion.figure>
-          ) : null}
-
-          {secondaryImages.length > 0 ? (
-            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
-              {secondaryImages.map((item, index) => (
-                <GalleryCard key={item.label} item={item} index={index + 1} />
-              ))}
+        {featuredImage ? (
+          <motion.figure
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, delay: 0.05, ease }}
+            className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm"
+          >
+            <div className="p-4 md:p-5">
+              <img
+                src={featuredImage.img}
+                alt={featuredImage.label}
+                className="h-[220px] w-full rounded-2xl border border-slate-100 object-contain shadow-md sm:h-[300px] lg:h-[380px]"
+              />
             </div>
-          ) : null}
-        </div>
+            <figcaption className="border-t border-slate-100 px-5 py-4">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">{featuredImage.label}</span>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">{featuredImage.description}</p>
+            </figcaption>
+          </motion.figure>
+        ) : null}
+
+        {secondaryImages.length > 0 ? (
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+            {secondaryImages.map((item, index) => (
+              <GalleryCard key={item.label} item={item} index={index + 1} />
+            ))}
+          </div>
+        ) : null}
       </div>
     </motion.article>
   );
@@ -177,7 +171,7 @@ function ProjectBlock({ title, subtitle, description, tech, features, cards, gal
 
 export default function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 border-b border-white/40 bg-[radial-gradient(ellipse_90%_50%_at_50%_-10%,rgba(187,168,232,0.1)_0%,transparent_55%),linear-gradient(180deg,#faf8ff_0%,#ffffff_55%,#f6faf6_100%)] px-5 py-16 md:px-8 md:py-24">
+    <section id="projects" className="scroll-mt-24 border-b border-white/40 bg-[radial-gradient(ellipse_90%_50%_at_50%_-10%,rgba(187,168,232,0.1)_0%,transparent_55%),linear-gradient(180deg,#faf8ff_0%,#ffffff_55%,#f6faf6_100%)] px-6 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle eyebrow="Work" title="Featured Projects" subtitle="Two selected academic and portfolio projects focused on web development, databases, and structured digital systems." />
 
