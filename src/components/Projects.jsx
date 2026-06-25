@@ -65,11 +65,11 @@ function GalleryCard({ item, index }) {
       transition={{ duration: 0.45, delay: index * 0.05, ease }}
       className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm"
     >
-      <div className="overflow-hidden bg-white p-3 sm:p-4">
+      <div className="bg-white p-3 sm:p-4">
         <img
           src={item.img}
           alt={item.label}
-          className="h-[220px] w-full rounded-2xl border border-slate-100 object-contain shadow-md sm:h-[260px] lg:h-[280px]"
+          className="h-[260px] w-full rounded-xl border border-slate-100 object-contain shadow-sm bg-white"
         />
       </div>
       <figcaption className="border-t border-white/55 px-5 py-4">
@@ -81,8 +81,6 @@ function GalleryCard({ item, index }) {
 }
 
 function ProjectBlock({ title, subtitle, description, tech, features, cards, gallery, accent }) {
-  const [featuredImage, ...secondaryImages] = gallery;
-
   return (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
@@ -135,35 +133,11 @@ function ProjectBlock({ title, subtitle, description, tech, features, cards, gal
           ) : null}
         </div>
 
-        {featuredImage ? (
-          <motion.figure
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: 0.05, ease }}
-            className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm"
-          >
-            <div className="p-4 md:p-5">
-              <img
-                src={featuredImage.img}
-                alt={featuredImage.label}
-                className="h-[220px] w-full rounded-2xl border border-slate-100 object-contain shadow-md sm:h-[300px] lg:h-[380px]"
-              />
-            </div>
-            <figcaption className="border-t border-slate-100 px-5 py-4">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">{featuredImage.label}</span>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">{featuredImage.description}</p>
-            </figcaption>
-          </motion.figure>
-        ) : null}
-
-        {secondaryImages.length > 0 ? (
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-            {secondaryImages.map((item, index) => (
-              <GalleryCard key={item.label} item={item} index={index + 1} />
-            ))}
-          </div>
-        ) : null}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {gallery.map((item, index) => (
+            <GalleryCard key={item.label} item={item} index={index} />
+          ))}
+        </div>
       </div>
     </motion.article>
   );
