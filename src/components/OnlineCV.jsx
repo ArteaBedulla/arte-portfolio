@@ -14,7 +14,7 @@ export default function OnlineCV() {
         <SectionTitle
           eyebrow="Resume"
           title="Online CV"
-          subtitle="A structured overview you can skim quickly — education, skills, interests and more."
+          subtitle="A concise overview of education, skills, projects and interests."
         />
 
         <div className="mt-12 space-y-10">
@@ -27,9 +27,9 @@ export default function OnlineCV() {
           >
             <h3 className="font-display text-lg font-semibold text-slate-900">A. Personal Profile</h3>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Computer Science graduate and Scientific Master&apos;s student with experience in academic
-              and personal full-stack projects. Interested in web development, software architecture,
-              backend systems, frontend interfaces, databases and secure digital systems.
+              Computer Science graduate and Scientific Master&apos;s student with practical experience from
+              academic and portfolio projects. Interested in web development, databases, backend
+              technologies and clean user interfaces.
             </p>
           </motion.div>
 
@@ -67,29 +67,29 @@ export default function OnlineCV() {
               <div>
                 <dt className="font-semibold text-slate-800">Frontend:</dt>
                 <dd className="mt-1">
-                  React, Vite, JavaScript, Tailwind CSS, HTML, CSS, Framer Motion
+                  HTML, CSS, JavaScript, React, UI Design basics
                 </dd>
               </div>
               <div>
                 <dt className="font-semibold text-slate-800">Backend:</dt>
                 <dd className="mt-1">
-                  C#, ASP.NET Core, Java, Spring Boot, REST APIs, MVC Architecture, Authentication
+                  SQL, Databases, C# / .NET basics, Java Spring Boot basics, PHP basics
                 </dd>
               </div>
               <div>
                 <dt className="font-semibold text-slate-800">Database:</dt>
                 <dd className="mt-1">
-                  SQL Server, MySQL, Entity Framework Core, JPA/Hibernate, ERD Design, SQL Queries
+                  SQL Server, SQL Queries, Relational Databases
                 </dd>
               </div>
               <div>
                 <dt className="font-semibold text-slate-800">Tools:</dt>
-                <dd className="mt-1">Git, GitHub, VS Code, Cursor AI, Postman, SSMS, Vercel</dd>
+                <dd className="mt-1">Git / GitHub</dd>
               </div>
               <div>
                 <dt className="font-semibold text-slate-800">Concepts:</dt>
                 <dd className="mt-1">
-                  Enterprise Architecture, RBAC, UML, 3-Tier Architecture, Data Warehouse Basics
+                  Clean UI structure, database-driven applications, basic backend integration
                 </dd>
               </div>
             </dl>
@@ -105,14 +105,14 @@ export default function OnlineCV() {
             <h3 className="font-display text-lg font-semibold text-slate-900">D. Professional Interests</h3>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {[
-                "Full-stack web development",
+                "Web development",
                 "React frontend development",
-                "C# backend development",
+                "C# backend basics",
                 "Backend APIs",
                 "Database-driven applications",
-                "Enterprise systems",
-                "UI/UX-focused digital products",
-                "Secure web applications",
+                "Structured academic projects",
+                "UI-focused digital products",
+                "Practical team collaboration",
               ].map((item) => (
                 <li
                   key={item}

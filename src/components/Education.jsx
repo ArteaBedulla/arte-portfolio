@@ -8,7 +8,7 @@ const items = [
     place: "Faculty of Natural Sciences",
     status: "Currently pursuing",
     description:
-      "Advanced academic studies in Computer Science, focused on software systems, databases, enterprise applications, application architecture and research-oriented development.",
+      "Current academic studies in Computer Science with focus on software systems, databases, web development and practical project work.",
     accent: "lavender",
   },
   {
@@ -16,7 +16,7 @@ const items = [
     place: "Faculty of Natural Sciences",
     status: "Completed",
     description:
-      "Completed undergraduate studies in Computer Science with foundations in programming, algorithms, databases, web development, software engineering, computer systems and application design.",
+      "Completed undergraduate studies in Computer Science with foundations in programming, databases, web development and software engineering.",
     accent: "matcha",
   },
 ];

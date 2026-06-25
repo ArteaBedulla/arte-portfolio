@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import DownloadCVButton from "./DownloadCVButton.jsx";
 import SectionTitle from "./SectionTitle.jsx";
 
@@ -42,15 +42,6 @@ export default function Contact() {
           >
             <Github className="h-4 w-4" />
             GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ArteaBedulla"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border border-[#e4daf5]/95 bg-[#faf8ff]/85 px-8 py-3 text-sm font-semibold text-slate-600 shadow-[0_2px_16px_-4px_rgba(139,114,196,0.12)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#d8cbf0] hover:bg-[#f7f3fc]"
-          >
-            <Linkedin className="h-4 w-4" />
-            LinkedIn
           </a>
           <DownloadCVButton className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border border-[#e8dff6]/90 bg-white/75 px-8 py-3 text-sm font-semibold text-slate-600 transition hover:-translate-y-0.5 hover:border-[#ddd0f0] hover:bg-[#fcfaff] disabled:hover:translate-y-0" />
         </motion.div>

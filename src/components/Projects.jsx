@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, BarChart3, Shield, Users, Workflow } from "lucide-react";
+import { BarChart3, Shield, Users, Workflow } from "lucide-react";
 import SectionTitle from "./SectionTitle.jsx";
 
 import planoraTasks from "../assets/landing/1.png";
@@ -111,16 +111,6 @@ function ProjectBlock({ title, subtitle, description, tech, features, cards, gal
         ))}
       </div>
 
-      <div className="mt-8 flex flex-wrap gap-3">
-        <a
-          href={`#${title.toLowerCase().includes("planora") ? "planora-demo" : "helixcore-demo"}`}
-          className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border border-[#e8dff8]/90 bg-gradient-to-r from-[#efe8fb] via-[#e8dcf7] to-[#dfd0f2] px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-[0_4px_22px_-6px_rgba(139,114,196,0.24)] transition hover:-translate-y-0.5 hover:from-[#ebe3fa] hover:via-[#e2d5f5] hover:to-[#d9c8ef]"
-        >
-          {title.toLowerCase().includes("planora") ? "View Project" : "Case Study"}
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
-      </div>
-
       {cards ? (
         <div className="mt-8 grid gap-4 lg:grid-cols-4">
           {cards.map((card) => {
@@ -151,12 +141,12 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24 border-b border-white/40 bg-[radial-gradient(ellipse_90%_50%_at_50%_-10%,rgba(187,168,232,0.1)_0%,transparent_55%),linear-gradient(180deg,#faf8ff_0%,#ffffff_55%,#f6faf6_100%)] px-5 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-6xl">
-        <SectionTitle eyebrow="Work" title="Featured Projects" subtitle="Two selected projects that show practical web development, databases and structured product work." />
+        <SectionTitle eyebrow="Work" title="Featured Projects" subtitle="Two selected academic and portfolio projects focused on web development, databases, and structured digital systems." />
 
         <ProjectBlock
           title="Planora — Productivity &amp; Memory Wall Web App"
-          subtitle="Selected project 1"
-          description="Planora is a productivity web application created to help users organize tasks, focus sessions, reading progress, quotes, and personal memories. The project includes authentication, task management, a memory wall, dashboard-style pages, and a responsive interface."
+          subtitle="SELECTED PROJECT 1"
+          description="Planora is a productivity web application designed to help users organize daily tasks, focus sessions, reading progress, quotes, and personal memories. The project includes user authentication, task management, a memory wall, dashboard-style pages, and a responsive interface."
           tech={planoraTech}
           features={planoraFeatures}
           cards={null}
@@ -167,8 +157,8 @@ export default function Projects() {
         <div className="mt-12">
           <ProjectBlock
             title="HelixCore — Enterprise DNA Laboratory Management System"
-            subtitle="Selected project 2"
-            description="HelixCore is an enterprise-style academic project designed for managing the workflow of a DNA laboratory. The system includes modules for clients, cases, DNA samples, laboratory analysis, genetic profiles, invoices, payments, and role-based access."
+            subtitle="SELECTED PROJECT 2"
+            description="HelixCore is an enterprise-style academic project designed to manage the workflow of a DNA laboratory. The system includes modules for clients, cases, DNA samples, laboratory analysis, genetic profiles, invoices, payments, and role-based access."
             tech={helixTech}
             features={helixFeatures}
             cards={helixCards}

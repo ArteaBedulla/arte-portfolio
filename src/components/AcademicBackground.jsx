@@ -2,19 +2,17 @@ import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle.jsx";
 
 const topics = [
-  "Enterprise Architecture",
-  "3-Tier Architecture",
+  "Web Development",
+  "Database Design",
   "UML Modeling",
   "Use Case Diagrams",
   "Sequence Diagrams",
   "MVC in Java",
-  "Java Servlets",
-  "Artificial Intelligence Search Algorithms",
+  "Java Spring Boot Basics",
   "Database Design",
   "SQL Queries",
-  "Data Warehouse Concepts",
-  "Computer Animation",
-  "Logic and Decision Trees",
+  "Structured Problem Solving",
+  "Team Collaboration",
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -29,7 +27,7 @@ export default function AcademicBackground() {
         <SectionTitle
           eyebrow="Studies"
           title="Academic & Technical Background"
-          subtitle="Besides full-stack development, I have worked on several academic areas that strengthen my understanding of software systems, architecture, data modeling, algorithms and problem solving."
+          subtitle="Academic topics that support practical web development, database work, structured systems and problem solving."
         />
 
         <motion.div

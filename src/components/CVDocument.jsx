@@ -275,11 +275,6 @@ export default function CVDocument() {
           <Link src="https://github.com/ArteaBedulla" style={styles.link}>
             github.com/ArteaBedulla
           </Link>
-          <Text style={styles.contactSep}>|</Text>
-          <Text style={styles.contactLabel}>LinkedIn: </Text>
-          <Link src="https://www.linkedin.com/in/ArteaBedulla" style={styles.link}>
-            linkedin.com/in/ArteaBedulla
-          </Link>
         </View>
 
         <SectionHeader title="Professional summary" />
@@ -353,9 +348,10 @@ export default function CVDocument() {
         <View style={styles.projectBlock}>
           <Text style={styles.projectTitle}>Planora — Productivity &amp; Memory Wall Web App</Text>
           <Text style={styles.projectBody}>
-            Planora is a productivity web application created to help users organize tasks, focus sessions,
-            reading progress, quotes, and personal memories. The project includes authentication, task
-            management, a memory wall, dashboard-style pages, and a responsive interface.
+            Planora is a productivity web application designed to help users organize daily tasks, focus
+            sessions, reading progress, quotes, and personal memories. The project includes user
+            authentication, task management, a memory wall, dashboard-style pages, and a responsive
+            interface.
           </Text>
           <Text style={styles.techLine}>
             <Text style={styles.techBold}>Technologies: </Text>
@@ -371,7 +367,7 @@ export default function CVDocument() {
         <View style={styles.projectBlockAlt}>
           <Text style={styles.projectTitle}>HelixCore — Enterprise DNA Laboratory Management System</Text>
           <Text style={styles.projectBody}>
-            HelixCore is an enterprise-style academic project designed for managing the workflow of a DNA
+            HelixCore is an enterprise-style academic project designed to manage the workflow of a DNA
             laboratory. The system includes modules for clients, cases, DNA samples, laboratory analysis,
             genetic profiles, invoices, payments, and role-based access.
           </Text>

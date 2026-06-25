@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import {
   GraduationCap,
-  Layers,
   LayoutDashboard,
   Palette,
-  Sparkles,
   BookMarked,
 } from "lucide-react";
 import SectionTitle from "./SectionTitle.jsx";
@@ -12,10 +10,9 @@ import SectionTitle from "./SectionTitle.jsx";
 const highlights = [
   { title: "Computer Science Graduate", icon: GraduationCap },
   { title: "Master's Student", icon: BookMarked },
-  { title: "Full-Stack Development", icon: LayoutDashboard },
-  { title: "Software Architecture", icon: Layers },
+  { title: "Web Development", icon: LayoutDashboard },
   { title: "UI/UX Interest", icon: Palette },
-  { title: "Project-Based Learning", icon: Sparkles },
+  { title: "Project-Based Learning", icon: Palette },
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -30,7 +27,7 @@ export default function ProfessionalProfile() {
         <SectionTitle
           eyebrow="Overview"
           title="Professional Profile"
-          subtitle="Computer Science graduate and Scientific Master's student with interest in full-stack web development, database-driven systems, software architecture and modern digital products. Experienced through academic and personal projects in building web applications with structured frontend interfaces, backend APIs, relational databases, authentication systems and role-based access control. Particularly interested in React frontend development and C# backend development, while also having experience with Java, Spring Boot, SQL Server, UML and enterprise application concepts."
+          subtitle="Computer Science graduate and Scientific Master's student with practical experience from academic and portfolio projects in web development, databases and backend technologies. Focused on clean interfaces, structured systems and steady learning through project work."
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
