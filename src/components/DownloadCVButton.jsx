@@ -10,7 +10,8 @@ import CVDocument from "./CVDocument.jsx";
 export default function DownloadCVButton({ className = "" }) {
   const [loading, setLoading] = useState(false);
 
-  async function handleDownload() {
+  async function handleDownload(event) {
+    event.preventDefault();
     if (loading) return;
     setLoading(true);
     try {
@@ -18,7 +19,7 @@ export default function DownloadCVButton({ className = "" }) {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "Artea-Bedulla-CV.pdf";
+      a.download = "Artea_Bedulla_CV.pdf";
       a.rel = "noopener";
       document.body.appendChild(a);
       a.click();
@@ -32,14 +33,15 @@ export default function DownloadCVButton({ className = "" }) {
   }
 
   return (
-    <button
-      type="button"
+    <a
+      href="/Artea_Bedulla_CV.pdf"
+      download="Artea_Bedulla_CV.pdf"
       onClick={handleDownload}
-      disabled={loading}
-      className={`${className} ${loading ? "cursor-wait opacity-80" : ""}`}
+      aria-disabled={loading}
+      className={`${className} ${loading ? "pointer-events-none cursor-wait opacity-80" : ""}`}
     >
       <Download className="h-4 w-4 shrink-0" aria-hidden />
       {loading ? "Preparing CV..." : "Download CV"}
-    </button>
+    </a>
   );
 }

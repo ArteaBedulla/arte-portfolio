@@ -255,20 +255,27 @@ function SectionHeader({ title, matcha = false }) {
  */
 export default function CVDocument() {
   return (
-    <Document title="Artea Bedulla — CV" author="Artea Bedulla" subject="Curriculum Vitae">
+    <Document title="Artea Bedulla CV" author="Artea Bedulla" subject="Curriculum Vitae">
       <Page size="A4" style={styles.page}>
         <Text style={styles.name}>Artea Bedulla</Text>
         <Text style={styles.title}>
           Computer Science Master&apos;s Student | Junior Web Developer
         </Text>
         <Text style={styles.tagline}>
-          I build clean web applications using React, JavaScript, SQL databases, and backend technologies.
+          I am a Computer Science graduate from the Faculty of Natural Sciences, University of Tirana,
+          and I am currently pursuing a Scientific Master&apos;s degree in Computer Science at the same
+          faculty.
         </Text>
 
         <View style={styles.contactRow}>
           <Text style={styles.contactLabel}>Email: </Text>
           <Link src="mailto:arteabedulla75@gmail.com" style={styles.link}>
             arteabedulla75@gmail.com
+          </Link>
+          <Text style={styles.contactSep}>|</Text>
+          <Text style={styles.contactLabel}>Portfolio: </Text>
+          <Link src="https://arte-portfolio.onrender.com/" style={styles.link}>
+            arte-portfolio.onrender.com
           </Link>
           <Text style={styles.contactSep}>|</Text>
           <Text style={styles.contactLabel}>GitHub: </Text>
@@ -279,8 +286,9 @@ export default function CVDocument() {
 
         <SectionHeader title="Professional summary" />
         <Text style={styles.body}>
-          I am a Computer Science graduate from the Faculty of Natural Sciences, University of Tirana, and
-          I am currently pursuing a Scientific Master&apos;s degree in Computer Science at the same faculty.
+          I am a Computer Science graduate from the Faculty of Natural Sciences, University of Tirana,
+          and I am currently pursuing a Scientific Master&apos;s degree in Computer Science at the same
+          faculty.
         </Text>
         <Text style={[styles.body, { marginTop: 6 }]}>
           I have practical experience from academic and portfolio projects where I worked with web
@@ -319,7 +327,7 @@ export default function CVDocument() {
           <View style={styles.skillCol}>
             <Text style={styles.skillLabel}>Backend</Text>
             <Text style={styles.skillText}>
-              SQL, Databases, C# / .NET basics, Java Spring Boot basics, PHP basics
+              C# / .NET basics, Java Spring Boot basics, PHP basics, Backend API basics
             </Text>
           </View>
         </View>
@@ -327,12 +335,12 @@ export default function CVDocument() {
           <View style={styles.skillCol}>
             <Text style={styles.skillLabelM}>Database &amp; Data</Text>
             <Text style={styles.skillText}>
-              SQL, Databases, SQL Server, SQL Queries, Relational Databases
+              SQL, SQL Server, Relational Databases, SQL Queries
             </Text>
           </View>
           <View style={styles.skillCol}>
             <Text style={styles.skillLabelM}>Tools</Text>
-            <Text style={styles.skillText}>Git / GitHub</Text>
+            <Text style={styles.skillText}>Git, GitHub</Text>
           </View>
         </View>
         <View style={styles.conceptsBox}>
@@ -382,26 +390,9 @@ export default function CVDocument() {
           </Text>
         </View>
 
-        <SectionHeader title="Academic and technical background" matcha />
-        <Text style={styles.body}>
-          HTML, CSS, JavaScript, React, SQL, Databases, C# / .NET basics, Java Spring Boot basics, PHP basics,
-          Git / GitHub, UI Design basics.
-        </Text>
-
-        <View style={styles.twoCol}>
-          <View style={styles.col}>
-            <SectionHeader title="Soft skills" />
-            <Text style={styles.skillText}>
-              Problem solving, analytical thinking, attention to detail, continuous learning, creativity,
-              communication, project organization, adaptability.
-            </Text>
-          </View>
-          <View style={styles.col}>
-            <SectionHeader title="Languages" />
-            <Text style={styles.skillText}>Albanian — Native</Text>
-            <Text style={[styles.skillText, { marginTop: 4 }]}>English — Professional / Academic</Text>
-          </View>
-        </View>
+        <SectionHeader title="Languages" matcha />
+        <Text style={styles.skillText}>Albanian — Native</Text>
+        <Text style={[styles.skillText, { marginTop: 4 }]}>English — B2+ / Communicative</Text>
       </Page>
     </Document>
   );
