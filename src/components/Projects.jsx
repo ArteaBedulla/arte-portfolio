@@ -63,10 +63,16 @@ function GalleryCard({ item, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.45, delay: index * 0.05, ease }}
-      className="overflow-hidden rounded-[1.25rem] border border-white/78 bg-white/60 shadow-[0_2px_24px_-4px_rgba(88,72,120,0.08)] backdrop-blur-xl"
+      className="overflow-hidden rounded-2xl border border-white/80 bg-white/65 shadow-[0_12px_36px_-18px_rgba(88,72,120,0.28)] backdrop-blur-xl"
     >
-      <div className="bg-gradient-to-b from-slate-50/90 to-white/70 p-2 sm:p-3">
-        <img src={item.img} alt={item.label} className="w-full rounded-xl object-cover object-top ring-1 ring-slate-900/[0.05] sm:rounded-[1rem]" />
+      <div className="bg-gradient-to-b from-slate-50/95 to-white/70 p-3 sm:p-4">
+        <div className="overflow-hidden rounded-2xl border border-white/70 shadow-xl ring-1 ring-slate-900/[0.05]">
+          <img
+            src={item.img}
+            alt={item.label}
+            className="h-[220px] w-full object-contain bg-white/80 sm:h-[260px] lg:h-[280px]"
+          />
+        </div>
       </div>
       <figcaption className="border-t border-white/55 px-5 py-4">
         <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">{item.label}</span>
@@ -77,6 +83,8 @@ function GalleryCard({ item, index }) {
 }
 
 function ProjectBlock({ title, subtitle, description, tech, features, cards, gallery, accent }) {
+  const [featuredImage, ...secondaryImages] = gallery;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
@@ -85,53 +93,83 @@ function ProjectBlock({ title, subtitle, description, tech, features, cards, gal
       transition={{ duration: 0.5, ease }}
       className="relative overflow-hidden rounded-[2rem] border border-white/75 bg-white/70 p-6 shadow-[0_4px_40px_-12px_rgba(88,72,120,0.12)] backdrop-blur-xl md:p-10"
     >
-      <div className="flex flex-col gap-3">
-        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/90 bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
-          <span className={`h-2 w-2 rounded-full ${accent}`} aria-hidden />
-          Featured
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
+        <div className="flex flex-col gap-3">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/90 bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
+            <span className={`h-2 w-2 rounded-full ${accent}`} aria-hidden />
+            Featured
+          </div>
+          <h3 className="font-display text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">{title}</h3>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{subtitle}</p>
+          <p className="max-w-2xl text-base leading-relaxed text-slate-600 md:text-[1.0625rem]">{description}</p>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            {tech.map((item) => (
+              <span key={item} className="rounded-full border border-slate-200/75 bg-white/85 px-3.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm">
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-2 flex flex-wrap gap-2">
+            {features.map((item) => (
+              <span key={item} className="rounded-full border border-[#e8ddff]/90 bg-gradient-to-r from-[#f5f0ff]/90 to-[#edf6ea]/80 px-3 py-1 text-[11px] font-semibold text-slate-700 sm:text-xs">
+                {item}
+              </span>
+            ))}
+          </div>
+
+          {cards ? (
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {cards.map((card) => {
+                const Icon = card.icon;
+                return (
+                  <div key={card.title} className="rounded-[1.15rem] border border-white/78 bg-white/60 p-5 shadow-sm">
+                    <span className="inline-flex rounded-xl bg-gradient-to-br from-[#f0eaff] to-[#eaf4e6] p-2.5 text-slate-700 ring-1 ring-cyan-100/35">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <h4 className="mt-3 text-sm font-semibold text-slate-900">{card.title}</h4>
+                    <p className="mt-2 text-xs leading-relaxed text-slate-600">{card.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
         </div>
-        <h3 className="font-display text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">{title}</h3>
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{subtitle}</p>
-        <p className="max-w-3xl text-base leading-relaxed text-slate-600 md:text-[1.0625rem]">{description}</p>
-      </div>
 
-      <div className="mt-8 flex flex-wrap gap-2">
-        {tech.map((item) => (
-          <span key={item} className="rounded-full border border-slate-200/75 bg-white/85 px-3.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm">
-            {item}
-          </span>
-        ))}
-      </div>
-
-      <div className="mt-6 flex flex-wrap gap-2">
-        {features.map((item) => (
-          <span key={item} className="rounded-full border border-[#e8ddff]/90 bg-gradient-to-r from-[#f5f0ff]/90 to-[#edf6ea]/80 px-3 py-1 text-[11px] font-semibold text-slate-700 sm:text-xs">
-            {item}
-          </span>
-        ))}
-      </div>
-
-      {cards ? (
-        <div className="mt-8 grid gap-4 lg:grid-cols-4">
-          {cards.map((card) => {
-            const Icon = card.icon;
-            return (
-              <div key={card.title} className="rounded-[1.15rem] border border-white/78 bg-white/60 p-5 shadow-sm">
-                <span className="inline-flex rounded-xl bg-gradient-to-br from-[#f0eaff] to-[#eaf4e6] p-2.5 text-slate-700 ring-1 ring-cyan-100/35">
-                  <Icon className="h-4 w-4" />
-                </span>
-                <h4 className="mt-3 text-sm font-semibold text-slate-900">{card.title}</h4>
-                <p className="mt-2 text-xs leading-relaxed text-slate-600">{card.text}</p>
+        <div className="space-y-5">
+          {featuredImage ? (
+            <motion.figure
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: 0.05, ease }}
+              className="overflow-hidden rounded-2xl border border-white/80 bg-white/65 shadow-[0_18px_48px_-24px_rgba(88,72,120,0.3)] backdrop-blur-xl"
+            >
+              <div className="bg-gradient-to-b from-slate-50/95 to-white/70 p-3 sm:p-4">
+                <div className="overflow-hidden rounded-2xl border border-white/70 shadow-xl ring-1 ring-slate-900/[0.05]">
+                  <img
+                    src={featuredImage.img}
+                    alt={featuredImage.label}
+                    className="h-[220px] w-full object-contain bg-white/85 sm:h-[300px] lg:h-[360px]"
+                  />
+                </div>
               </div>
-            );
-          })}
-        </div>
-      ) : null}
+              <figcaption className="border-t border-white/55 px-5 py-4">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">{featuredImage.label}</span>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{featuredImage.description}</p>
+              </figcaption>
+            </motion.figure>
+          ) : null}
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {gallery.map((item, index) => (
-          <GalleryCard key={item.label} item={item} index={index} />
-        ))}
+          {secondaryImages.length > 0 ? (
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
+              {secondaryImages.map((item, index) => (
+                <GalleryCard key={item.label} item={item} index={index + 1} />
+              ))}
+            </div>
+          ) : null}
+        </div>
       </div>
     </motion.article>
   );

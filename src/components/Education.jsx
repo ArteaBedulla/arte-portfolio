@@ -4,19 +4,19 @@ import SectionTitle from "./SectionTitle.jsx";
 
 const items = [
   {
-    title: "Scientific Master's Degree in Computer Science",
-    place: "Faculty of Natural Sciences",
+    title: "Scientific Master’s Degree in Computer Science",
+    place: "Faculty of Natural Sciences, University of Tirana",
     status: "Currently pursuing",
     description:
-      "Current academic studies in Computer Science with focus on software systems, databases, web development and practical project work.",
+      "Currently pursuing a Scientific Master’s degree in Computer Science, with focus on software systems, databases, web applications, and practical academic projects.",
     accent: "lavender",
   },
   {
-    title: "Bachelor's Degree in Computer Science",
-    place: "Faculty of Natural Sciences",
+    title: "Bachelor’s Degree in Computer Science",
+    place: "Faculty of Natural Sciences, University of Tirana",
     status: "Completed",
     description:
-      "Completed undergraduate studies in Computer Science with foundations in programming, databases, web development and software engineering.",
+      "Completed undergraduate studies in Computer Science, gaining foundations in programming, algorithms, databases, web development, software engineering, and application design.",
     accent: "matcha",
   },
 ];
@@ -30,7 +30,7 @@ export default function Education() {
       className="scroll-mt-24 border-b border-white/40 bg-[linear-gradient(180deg,#faf8ff_0%,#ffffff_100%)] px-5 py-16 md:px-8 md:py-24"
     >
       <div className="mx-auto max-w-6xl">
-        <SectionTitle eyebrow="Academic path" title="Education" />
+        <SectionTitle eyebrow="ACADEMIC PATH" title="Education" />
 
         <div className="relative mt-14 space-y-0">
           <div

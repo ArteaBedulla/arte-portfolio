@@ -279,14 +279,14 @@ export default function CVDocument() {
 
         <SectionHeader title="Professional summary" />
         <Text style={styles.body}>
-          I am a Computer Science graduate and currently pursuing a Scientific Master&apos;s degree in
-          Computer Science. I have practical experience from academic and portfolio projects where I worked
-          with web development, databases, and backend technologies.
+          I am a Computer Science graduate from the Faculty of Natural Sciences, University of Tirana, and
+          I am currently pursuing a Scientific Master&apos;s degree in Computer Science at the same faculty.
         </Text>
         <Text style={[styles.body, { marginTop: 6 }]}>
-          My main focus is building clean and structured web applications using React, JavaScript, HTML,
-          CSS, SQL databases, and backend frameworks such as C#/.NET and Java Spring Boot. I enjoy creating
-          systems that combine user-friendly interfaces with organized data and real business logic.
+          I have practical experience from academic and portfolio projects where I worked with web
+          development, databases, and backend technologies. My main focus is building clean and
+          structured web applications using React, JavaScript, HTML, CSS, SQL databases, and backend
+          frameworks such as C#/.NET and Java Spring Boot.
         </Text>
         <Text style={[styles.body, { marginTop: 6 }]}>
           I am especially interested in digital technology, data-driven solutions, and learning how
@@ -298,12 +298,12 @@ export default function CVDocument() {
         <View style={styles.eduGrid}>
           <View style={styles.eduCard}>
             <Text style={styles.eduTitle}>Scientific Master&apos;s Degree in Computer Science</Text>
-            <Text style={styles.eduSub}>Faculty of Natural Sciences</Text>
+            <Text style={styles.eduSub}>Faculty of Natural Sciences, University of Tirana</Text>
             <Text style={styles.eduStatus}>Currently pursuing</Text>
           </View>
           <View style={styles.eduCardAlt}>
             <Text style={styles.eduTitle}>Bachelor&apos;s Degree in Computer Science</Text>
-            <Text style={styles.eduSub}>Faculty of Natural Sciences</Text>
+            <Text style={styles.eduSub}>Faculty of Natural Sciences, University of Tirana</Text>
             <Text style={styles.eduStatusMuted}>Completed</Text>
           </View>
         </View>

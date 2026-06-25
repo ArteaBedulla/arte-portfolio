@@ -27,9 +27,9 @@ export default function OnlineCV() {
           >
             <h3 className="font-display text-lg font-semibold text-slate-900">A. Personal Profile</h3>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Computer Science graduate and Scientific Master&apos;s student with practical experience from
-              academic and portfolio projects. Interested in web development, databases, backend
-              technologies and clean user interfaces.
+              Computer Science graduate from the Faculty of Natural Sciences, University of Tirana, and
+              Scientific Master&apos;s student at the same faculty. Interested in web development,
+              databases, backend technologies and clean user interfaces.
             </p>
           </motion.div>
 
@@ -44,12 +44,12 @@ export default function OnlineCV() {
             <ul className="mt-6 space-y-6">
               <li className="border-l-2 border-[#b8a6e0]/80 pl-5">
                 <p className="font-semibold text-slate-900">Scientific Master&apos;s Degree in Computer Science</p>
-                <p className="text-slate-600">Faculty of Natural Sciences</p>
+                <p className="text-slate-600">Faculty of Natural Sciences, University of Tirana</p>
                 <p className="mt-1 text-sm font-medium text-[#6b9b7a]">Currently pursuing</p>
               </li>
               <li className="border-l-2 border-[#9bbf90]/90 pl-5">
                 <p className="font-semibold text-slate-900">Bachelor&apos;s Degree in Computer Science</p>
-                <p className="text-slate-600">Faculty of Natural Sciences</p>
+                <p className="text-slate-600">Faculty of Natural Sciences, University of Tirana</p>
                 <p className="mt-1 text-sm font-medium text-slate-500">Completed</p>
               </li>
             </ul>

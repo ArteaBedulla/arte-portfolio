@@ -27,7 +27,7 @@ export default function ProfessionalProfile() {
         <SectionTitle
           eyebrow="Overview"
           title="Professional Profile"
-          subtitle="Computer Science graduate and Scientific Master's student with practical experience from academic and portfolio projects in web development, databases and backend technologies. Focused on clean interfaces, structured systems and steady learning through project work."
+          subtitle="Computer Science graduate from the Faculty of Natural Sciences, University of Tirana, and Scientific Master's student at the same faculty. Practical experience from academic and portfolio projects in web development, databases and backend technologies."
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

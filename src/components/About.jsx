@@ -19,15 +19,15 @@ export default function About() {
         >
           <div className="prose prose-slate max-w-none text-base leading-[1.8] text-slate-600">
             <p>
-              I am a Computer Science graduate and currently pursuing a Scientific Master&apos;s degree in
-              Computer Science. I have practical experience from academic and portfolio projects where I
-              worked with web development, databases, and backend technologies.
+              I am a Computer Science graduate from the Faculty of Natural Sciences, University of Tirana,
+              and I am currently pursuing a Scientific Master&apos;s degree in Computer Science at the same
+              faculty.
             </p>
             <p className="mt-6">
-              My main focus is building clean and structured web applications using React, JavaScript,
-              HTML, CSS, SQL databases, and backend frameworks such as C#/.NET and Java Spring Boot. I
-              enjoy creating systems that combine user-friendly interfaces with organized data and real
-              business logic.
+              I have practical experience from academic and portfolio projects where I worked with web
+              development, databases, and backend technologies. My main focus is building clean and
+              structured web applications using React, JavaScript, HTML, CSS, SQL databases, and backend
+              frameworks such as C#/.NET and Java Spring Boot.
             </p>
             <p className="mt-6">
               I am especially interested in digital technology, data-driven solutions, and learning how
